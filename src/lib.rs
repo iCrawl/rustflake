@@ -50,7 +50,7 @@ impl Snowflake {
         let mut last_timestamp = self.time.lock();
         let mut timestamp = self.get_time();
         if timestamp == *last_timestamp {
-            self.sequence = (self.sequence + 1) & -1 ^ (-1 << 12);
+            self.sequence = (self.sequence + 1) & (-1 ^ (-1 << 12));
             if self.sequence == 0 && timestamp <= *last_timestamp {
                 timestamp = self.get_time();
             }

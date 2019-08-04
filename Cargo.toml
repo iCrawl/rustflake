@@ -1,0 +1,16 @@
+[package]
+name = "rustflake"
+version = "0.1.0"
+authors = ["iCrawl <icrawltogo@gmail.com>"]
+edition = "2018"
+description = "..."
+repository = "https://github.com/iCrawl/rustflake"
+readme = "README.md"
+keywords = ["snowflake", "twitter", "id", "uid"]
+license = "MIT"
+
+[badges]
+maintenance = { status = "passively-maintained" }
+
+[dependencies]
+chrono = "0.4.7"

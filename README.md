@@ -19,13 +19,13 @@ rustflake = "0.1.0"
 
 and this to your crate root:
 
-```rs
+```rust
 use rustflake;
 ```
 
 ## Example
 
-```rs
+```rust
 use rustflake::Snowflake;
 
 fn main() {
@@ -34,7 +34,7 @@ fn main() {
 }
 ```
 
-```rs
+```rust
 use rustflake::Snowflake;
 
 fn main() {
@@ -47,7 +47,7 @@ fn main() {
 }
 ```
 
-```rs
+```rust
 use rustflake::Snowflake;
 
 fn main() {

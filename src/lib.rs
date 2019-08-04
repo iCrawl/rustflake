@@ -1,5 +1,6 @@
 use chrono::Utc;
-use std::sync::{Arc, Mutex};
+use parking_lot::Mutex;
+use std::sync::Arc;
 
 pub struct Snowflake {
     epoch: i64,
@@ -46,7 +47,7 @@ impl Snowflake {
     }
 
     pub fn generate(&mut self) -> i64 {
-        let mut last_timestamp = self.time.lock().unwrap();
+        let mut last_timestamp = self.time.lock();
         let mut timestamp = self.get_time();
         if timestamp == *last_timestamp {
             self.sequence = (self.sequence + 1) & -1 ^ (-1 << 12);

@@ -13,5 +13,5 @@ license = "MIT"
 maintenance = { status = "passively-maintained" }
 
 [dependencies]
-chrono = "0.4.19"
+chrono = "0.4.22"
 parking_lot = "0.12.1"
